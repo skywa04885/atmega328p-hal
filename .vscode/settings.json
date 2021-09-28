@@ -1,0 +1,20 @@
+{
+    "files.associations": {
+        "cstdint": "cpp"
+    },
+    "AVR.source.compiler": "/usr/bin/avr-gcc",
+    "AVR.programmer.tool": "/usr/bin/avrdude",
+    "AVR.device.type": "atmega328p",
+    "AVR.source.libraries": [
+        "./inc"
+    ],
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        "**/*.o": true
+    }
+}
