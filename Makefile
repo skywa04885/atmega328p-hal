@@ -23,6 +23,7 @@ AVR_GPP_ARGS	+= -Werror
 AVR_GPP_ARGS	+= -I./inc
 AVR_GPP_ARGS	+= -nostartfiles
 AVR_GPP_ARGS	+= -Os
+AVR_GPP_ARGS	+= -DF_CPU=16000000UL
 
 # Size arguments
 AVR_SIZE_ARGS	+= --format=avr

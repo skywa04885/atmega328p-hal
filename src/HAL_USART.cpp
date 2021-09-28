@@ -1,8 +1,4 @@
-#include <string.h>
-#include <avr/io.h>
-
 #include "HAL_USART.hpp"
-#include "HAL_Base.hpp"
 
 namespace HAL
 {
@@ -23,18 +19,6 @@ namespace HAL
         // Sets the value in the baudrate-register.
         usart->UBRRL = static_cast <uint8_t> (UBRR_VAL & 0xF);
         usart->UBRRH = static_cast <uint8_t> ((UBRR_VAL >> 8) & 0xF);
-    }
-
-    /// Starts the USART in RX/TX Mode.
-    [[ maybe_unused ]] void USART_StartRXTX (USART_Registers *usart) noexcept
-    {
-        usart->UCSRB |= (_BV8 (RXEN0) | _BV8 (TXEN0));
-    }
-
-    /// Stops the USART>
-    [[ maybe_unused ]] void USART_Stop (USART_Registers *usart) noexcept
-    {
-        usart->UCSRB &= ~(_BV8 (RXEN0) | _BV8 (TXEN0));
     }
 
     /// Writes one single byte to the USART.
